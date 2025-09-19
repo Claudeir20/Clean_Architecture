@@ -7,3 +7,6 @@ class UsuarioModel(AbstractBaseUser):
     tipo = models.CharField(max_length=20, default='cliente')
 
     USERNAME_FIELD = 'email'
+
+    def __str__(self):
+        return self.nome
